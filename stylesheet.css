@@ -1,14 +1,16 @@
+
 body{
     font-family: monospace;
 }
 .divStyle{
     background-color: rgb(224, 224, 224);
-    margin: 1px;
+    margin-bottom: 15px;
     margin-left: 125px;
     padding: 5px;
     width: 70%;
     border: 1px solid;
     border-radius: 5px;
+    
 }
 
 #fotoPerfil{
@@ -26,5 +28,18 @@ body{
 #bio{
 margin-left: 125px;
 height: 145px;
+}
+
+table, td, tr{
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.tableStyle{
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+
+    
 }
 
