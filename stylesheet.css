@@ -29,8 +29,7 @@ body{
 margin-left: 125px;
 height: 145px;
 }
-
-table, td, tr{
+ td, tr{
     border: 1px solid #000;
     border-radius: 10px;
 }
