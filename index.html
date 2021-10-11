@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scala=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Victor Amorim</title>
 
 </head>
-<body style="font-family: monospace;">
+<body>
+
     <header>
         <h1>Know me better (BETA)<h1>
     </header>
-    <section>
+
+    <main>
+    
         <header>
             <h2>Who am I?</h2>
         </header>
-        <div name="perfil">
-            <!--<img src="Victor Amorim.jpg">-->
+        <div name="perfil" class="divStyle" id="perfil">
+            <img id="fotoPerfil" src="Victor Amorim.jpg">
             <p><strong>Victor Amorim</strong></p>
         </div>
-        <div name="bio">
+        <div name="bio" class="divStyle" id="bio">
             <header>
                 <label for="bio"><h3>Bio</h3></label>
                 <hr>
@@ -32,20 +37,20 @@
                 me during my adolescence, but never leave the basics
                 and today I'm studying several programming languages ​​
                 and preparing to enter computer science college. <br/>
-
                 This is my first project, so enjoy!!!
             </p>
             <footer>
-                 <!-- date and hour of last update -->
+                    <!-- date and hour of last update -->
             </footer>
         </div>
-        <div name="info">
+    
+        <div name="info" class="divStyle">
             <header>
                 <label for="info"><h3>Informations</h3></label>
                 <hr>
             </header>
             <ul>
-               
+    
                 <li id="from">I am from Brazil</li>
                 <li id="address">I live in the Vila Natal, São Paulo - SP</li>
                 <li id="birthday"> Birthday: 11/01/2002</li>
@@ -63,15 +68,16 @@
                     , animes, mangas, books, sports, peoples, and business.
                 </li>
                 <li id="objective"> I’m looking to a full-time job as a programmer
-                     (THAT's MY DREAM)
+                        (THAT's MY DREAM)
                 </li>
-                <li id="learning">I’m currently learning Ruby on Rails, JavaScrip C++ and english.</li>    
+                <li id="learning">I’m currently learning Ruby on Rails, JavaScrip C++ and english.</li>
+    
             </ul>
             <footer>
-                <!-- date and hour of last update -->
+                <p>Last update: 09/10/2021 at 18:23</p>
             </footer>
         </div>
-        <div name="Hobbies">
+        <div name="Hobbies" class="divStyle">
             <Header>
                 <label for="Hobbies"><h3>Hobbies</h3></label>
                 <hr>
@@ -85,20 +91,19 @@
                     <li>Calistenics</li>
                 </ul>
             <footer>
-                <!-- date and hour of last update -->
+               <p>Last update: 09/10/2021 at 17:48</p>
             </footer>
-
         </div>
-        <div name="learning">
+        <div name="learning" class="divStyle">
             <header>
                 <label for="learning"><h3>Learning</h3></label>
                 <hr>
             </header>
-            <table>
+            <table id="tb_learning" class="tableStyle">
                 <thead>
                     <tr>
-                        <td>Languages</td>
-                        <td>Level</td>
+                        <th>Languages</th>
+                        <th>Level</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -106,28 +111,26 @@
                         <td>JavaScrip</td>
                         <td>intermediary</td>
                     </tr>
-
                 </tbody>
                 <tfoot>
-
                 </tfoot>
             </table>
             <footer>
-                <!-- date and hour of last update -->
+                <a href="learning.html">See all</a>
             </footer>
         </div>
-        <div name="projects">
-            <header>
+        <div name="projects" class="divStyle">
+            <header >
                 <label for="projects"><h3>Projects</h3></label>
                 <hr>
             </header>
-            <table>
+            <table id="tb_projects" class="tableStyle">
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Language</td>
-                        <td>Status</td>
-                        <td>finished </td>
+                        <th>Name</th>
+                        <th>Language</th>
+                        <th>Status</th>
+                        <th>finished </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -137,17 +140,17 @@
                         <td>In progress</td>
                         <td>--</td>
                     </tr>
-
                 </tbody>
                 <tfoot>
-                    
+    
                 </tfoot>
             </table>
             <footer>
-                <!-- date and hour of last update -->
+                <a href="projects.html">See all</a>
             </footer>
         </div>
-    </section>
+    
+    </main>
     <footer>
 
     </footer>
