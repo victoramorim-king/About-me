@@ -6,6 +6,21 @@ const tempLearning = [{
 const getLocalStorage = () => JSON.parse(localStorage.getItem('dbLearned')) ?? [];
 const setLocalStorage = (dbLearned) => localStorage.setItem('dbLearned', JSON.stringify(dbLearned));
 
+const createRow = (learned) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = ` 
+    <td>${learned.course}</td>
+    <td>${learned.level}</td>
+    `
+    document.querySelector('#tb_learning>tbody').appendChild(newRow)
+
+}
+
+const upDateTable = () => {
+    const dbLearned = readLearning()
+    dbLearned.forEach(createRow)
+}
+
 const clearFields = () => {
     const fields = document.querySelectorAll('.newLearned')
     fields.forEach(field => field.value = "")
