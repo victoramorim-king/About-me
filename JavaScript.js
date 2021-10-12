@@ -6,6 +6,10 @@ const tempLearning = [{
 const getLocalStorage = () => JSON.parse(localStorage.getItem('dbLearned')) ?? [];
 const setLocalStorage = (dbLearned) => localStorage.setItem('dbLearned', JSON.stringify(dbLearned));
 
+const clearFields = () => {
+    const fields = document.querySelectorAll('.newLearned')
+    fields.forEach(field => field.value = "")
+}
 
 const isValidFields = () => {
     return document.getElementById('form').reportValidity()
@@ -18,6 +22,7 @@ const saveLearned = () => {
             level: document.getElementById('form_level').value
         }
         createLearning(learned)
+        clearFields()
     }
 }
 
