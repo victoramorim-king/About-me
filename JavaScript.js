@@ -6,6 +6,11 @@ const tempLearning = [{
 const getLocalStorage = () => JSON.parse(localStorage.getItem('dbLearned')) ?? [];
 const setLocalStorage = (dbLearned) => localStorage.setItem('dbLearned', JSON.stringify(dbLearned));
 
+const clearTable = () => {
+    const rows = document.querySelectorAll('#tb_learning>tbody tr')
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
 const createRow = (learned) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = ` 
@@ -18,7 +23,9 @@ const createRow = (learned) => {
 
 const upDateTable = () => {
     const dbLearned = readLearning()
+    clearTable()
     dbLearned.forEach(createRow)
+
 }
 
 const clearFields = () => {
@@ -37,6 +44,7 @@ const saveLearned = () => {
             level: document.getElementById('form_level').value
         }
         createLearning(learned)
+        upDateTable()
         clearFields()
     }
 }
