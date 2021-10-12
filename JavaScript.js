@@ -6,6 +6,22 @@ const tempLearning = [{
 const getLocalStorage = () => JSON.parse(localStorage.getItem('dbLearned')) ?? [];
 const setLocalStorage = (dbLearned) => localStorage.setItem('dbLearned', JSON.stringify(dbLearned));
 
+
+const isValidFields = () => {
+    return document.getElementById('form').reportValidity()
+}
+
+const saveLearned = () => {
+    if (isValidFields()){
+        const learned = {
+            course: document.getElementById('form_course').value,
+            level: document.getElementById('form_level').value
+        }
+        createLearning(learned)
+    }
+}
+
+
 const deleteLearned = (index) => {
     const dbLearned = readLearning()
     dbLearned.splice(index, 1)
